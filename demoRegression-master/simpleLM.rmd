@@ -63,8 +63,6 @@ abline(headlengthModel)
 summary.lm(headlengthModel)
 ```
 
-for model length~headlength, adjusted $r^2$ = 0.84
-
 adjust $r^2$ for the head length model is 0.84, this is greater than the 
 adjusted $r^2$ for neck, so this model is better than neck model and all other models.
 
