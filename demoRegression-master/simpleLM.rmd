@@ -26,7 +26,7 @@ plot(LENGTH~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-for model length~neck, adjusted r~2 = 0.75
+for model length~neck, adjusted $r^2$ = 0.75
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
@@ -43,4 +43,68 @@ summary.lm(ageModel)
 adjust $r^2$ for the age model is 0.51, this is less than the 
 adjusted $r^2$ for neck, so this model is not as good as the neck model.
 
+## length based on sex 
 
+```{r}
+sexModel <- lm(LENGTH~SEX,data=bears)
+plot(LENGTH~SEX,data=bears)
+summary.lm(sexModel)
+```
+For model length~sex, adjusted $r^2$ = -0.0084, so this model is the lowest of all model.
+
+
+
+## length based on headlength 
+
+```{r}
+headlengthModel <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(headlengthModel)
+summary.lm(headlengthModel)
+```
+
+for model length~headlength, adjusted $r^2$ = 0.84
+
+adjust $r^2$ for the head length model is 0.84, this is greater than the 
+adjusted $r^2$ for neck, so this model is better than neck model and all other models.
+
+
+## length based on headwidth 
+
+```{r}
+headwidthModel <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(headwidthModel)
+summary.lm(headwidthModel)
+```
+for model length~headwidth, adjusted $r^2$ = 0.53 and is better than age model which has an adjusted $r^2$ = 0.51
+
+
+## length based on chest 
+
+```{r}
+chestModel <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(chestModel)
+summary.lm(chestModel)
+```
+
+for model length~chest, adjusted $r^2$ = 0.79 making this model one of the highest along with
+head, neck and weight.
+
+## length based on weight
+
+```{r}
+weightModel <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(weightModel)
+summary.lm(weightModel)
+```
+for model length~weight, adjusted $r^2$ = 0.74 
+
+
+
+### Conclusion
+
+
+In conclusion, when predicting bear length, the models based on head length and chest measurements show the highest adjusted $r^2$  values and thus provide the best predictions among the factors considered. These findings suggest that head length and chest measurements are strong predictors of bear length compared to other variables like age, sex, and weight.
