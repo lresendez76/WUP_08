@@ -26,7 +26,21 @@ plot(LENGTH~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
+for model length~neck, adjusted r~2
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+
+
+## length based on age 
+
+```{r}
+ageModel <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(ageModel)
+summary.lm(ageModel)
+```
+
+adjust $r^2$ for the age model is 0.51, this is less than the 
+adjusted $r^2$ for neck, so this model is not as good as the neck model
+
 
