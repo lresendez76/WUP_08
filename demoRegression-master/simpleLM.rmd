@@ -1,7 +1,7 @@
 ---
 title: "simpleRegress"
-author: "put your name here"
-date: "Fall 2020"
+author: "Luis Resendez"
+date: "Summer 2024"
 output: html_document
 ---
 
@@ -41,6 +41,6 @@ summary.lm(ageModel)
 ```
 
 adjust $r^2$ for the age model is 0.51, this is less than the 
-adjusted $r^2$ for neck, so this model is not as good as the neck model
+adjusted $r^2$ for neck, so this model is not as good as the neck model.
 
 
